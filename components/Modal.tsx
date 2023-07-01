@@ -46,16 +46,16 @@ const Modal: React.FC<ModalProps> = ({
        inset-0 z-50 outline-none focus:outline-none bg-neutral-800 bg-opacity-70"
       >
         <div
-          className="relative w-full lg:w-3/6 my-6 mx-auto
+          className="relative w-full lg:w-3/6 my-4 mx-auto
          lg:max-w-3xl h-full lg:h-auto"
         >
           {/*content*/}
           <div
-            className="h-full lg:h-auto border-0 rounded-lg relative flex
+            className="sm:h-full lg:h-auto border-0 rounded-lg relative flex
            flex-col w-full bg-black outline-none focus:outline-none"
           >
             {/* {Header} */}
-            <div className="flex items-center justify-between p-10 rounded-t">
+            <div className="flex items-center justify-between p-4 rounded-t">
               <h3 className="text-3xl font-semibold text-white">{title}</h3>
               <button
                 onClick={handleClose}
@@ -66,9 +66,9 @@ const Modal: React.FC<ModalProps> = ({
               </button>
             </div>
             {/* {Body} */}
-            <div className="relative p-10 flex-auto">{body}</div>
+            <div className="relative p-4 flex-auto">{body}</div>
             {/* {Footer} */}
-            <div className="flex flex-col gap-2 p-10">
+            <div className="flex flex-col gap-2 p-4">
               <Button
                 disabled={disabled}
                 label={actionLabel}
