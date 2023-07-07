@@ -1,6 +1,5 @@
 import useSWR from "swr";
 import fetcher from "libs/fetcher";
-import { userAgent } from "next/server";
 
 const useCurrentUser = () => {
     const { data, error, isLoading, mutate } = useSWR("/api/current", fetcher);
