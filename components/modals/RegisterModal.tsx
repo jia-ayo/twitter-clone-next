@@ -58,6 +58,7 @@ const RegisterModal = () => {
     <div className="flex flex-col gap-4">
       <Input
         placeholder="Email"
+        type="email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         disabled={isLoading}
@@ -76,6 +77,7 @@ const RegisterModal = () => {
       />
       <Input
         placeholder="password"
+        type="password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         disabled={isLoading}
