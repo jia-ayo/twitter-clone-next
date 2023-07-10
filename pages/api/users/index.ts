@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "libs/prismadb";
+import { userTransformer } from "libs/userTransformer";
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,7 +15,7 @@ export default async function handler(
         createdAt: "desc",
       },
     });
-      return res.status(200).json(users)
+      return res.status(200).json(users.map(userTransformer))
   } catch (error) {
     console.log(error);
     return res.status(400).end();
