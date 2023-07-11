@@ -1,5 +1,7 @@
 import serverAuth from "libs/serverAuth";
+import { tweetTransformer } from "libs/tweetTransformer";
 import { NextApiRequest, NextApiResponse } from "next";
+import prisma from "libs/prismadb";
 
 export default async function handler(
   req: NextApiRequest,
@@ -27,7 +29,7 @@ export default async function handler(
       let posts;
 
       if (userId && typeof userId === "string") {
-        posts = await prisma?.post.findMany({
+        posts = await prisma.post.findMany({
           where: {
             userId,
           },
@@ -40,7 +42,7 @@ export default async function handler(
           },
         });
       } else {
-        posts = await prisma?.post.findMany({
+        posts = await prisma.post.findMany({
           include: {
             user: true,
             comments: true,
@@ -50,6 +52,7 @@ export default async function handler(
           },
         });
       }
+      return res.status(200).json(posts.map(tweetTransformer));
     }
   } catch (error) {
     console.log(error);
