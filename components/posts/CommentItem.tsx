@@ -44,7 +44,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
               {createdAt}
             </span>
           </div>
-          <div className="text-white mt-1">
+          <div className="text-white w-full  mt-1">
               {data.body}
           </div>
         </div>

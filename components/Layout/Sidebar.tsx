@@ -32,7 +32,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="block sm:hidden pr-2 bg-neutral-800 h-14 fixed bottom-0 w-full">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center w-full">
           <div className=" flex items-stretch space-x-1">
             {items.map((item) => (
               <SidebarItem
