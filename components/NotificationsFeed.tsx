@@ -21,7 +21,7 @@ const NotificationsFeed = () => {
 
   return (
     <div className="flex flex-col">
-      {fetchedNotifications.map((notification: Record<string, any>) => {
+      {fetchedNotifications.map((notification: Record<string, any>) =>( 
         <div
           key={notification.id}
           className="
@@ -33,7 +33,7 @@ const NotificationsFeed = () => {
                 {notification.body}
             </p>
         </div>;
-      })}
+      ))}
     </div>
   );
 };
