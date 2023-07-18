@@ -39,7 +39,6 @@ const Avater: React.FC<AvaterProps> = ({ userId, isLarge, hasBorder }) => {
           objectFit: "cover",
           borderRadius: "100%",
           backgroundColor: "black",
-          zIndex: '0',
         }}
         alt="Avater"
         onClick={onClick}
