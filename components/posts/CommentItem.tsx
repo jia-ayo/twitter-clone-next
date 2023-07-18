@@ -28,9 +28,9 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
     <div
       className="
       boarder-b-[1px] border-neutral-800 p-5 
-      cursor-pointer hover:bg-neutral-900 transition "
+      cursor-pointer hover:bg-neutral-900 w-full transition  "
     >
-      <div className="flex flex-row items-start gap-3">
+      <div className="flex flex-row items-start w-full gap-3">
         <Avater userId={data.user.id} />
         <div>
           <div className="flex flex-row items-center gap-2">
