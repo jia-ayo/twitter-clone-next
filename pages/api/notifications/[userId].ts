@@ -9,7 +9,7 @@ export default async function handler(
     return res.status(405).end();
   }
   try {
-      const { userId } = req.body;
+      const { userId } = req.query;
       if (!userId || typeof userId !== "string") {
           throw new Error("Invalid ID")
       }
