@@ -73,7 +73,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
               <Button
                 disabled={isLoading || !body}
                 onClick={onSubmit}
-                label="Tweet"
+                label="Share"
               />
             </div>
           </div>
@@ -81,7 +81,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
       ) : (
         <div className="py-5">
           <h1 className="text-white text-xl text-center mb-3 font-bold">
-            Welcome to twitter
+            Welcome to Discuss
           </h1>
           <div className="flex flex-row items-center justify-center gap-2">
             <Button label="Login" onClick={loginModal.onOpen} />
