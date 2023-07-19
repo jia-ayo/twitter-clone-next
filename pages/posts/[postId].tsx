@@ -22,7 +22,7 @@ const PostView = () => {
   }
   return (
     <>
-      <Header label="Share" showBackArrow />
+      <Header label="Thought" showBackArrow />
       <PostItem data={fetchedPost} />
       <Form
         postId={postId as string}

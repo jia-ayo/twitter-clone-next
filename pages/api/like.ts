@@ -45,7 +45,7 @@ export default async function handler(
         if (post?.userId) {
           await prisma.notification.create({
             data: {
-              body: `${currentUser.username} liked your tweet`,
+              body: `${currentUser.username} liked your thought`,
               userId: post.userId,
             },
           });
